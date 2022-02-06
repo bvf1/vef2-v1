@@ -33,11 +33,15 @@ export function makeHTML(title, entry) {
 export function makeIndex(skrar) {
   let list = '';
   for (const skra of skrar) {
-    const link = `<p><a href="${`${skra}.html`}">${skra}.txt</a></p>`;
+    const link = `
+    <p><a href="${`${skra}.html`}">${skra}.txt</a></p>
+    `;
     list += link;
   }
-  return `<h1 class=part1>Töluleg greining</h1>
-  <section class="part3"=>${list}</section>`;
+  return `
+  <h1 class=part1>Töluleg greining</h1>
+  <section class="part3">${list}</section>
+  `;
 }
 
 export function skraTemplate(title, skra, showBack = false) {

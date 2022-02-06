@@ -14,7 +14,6 @@ function changeFormat(input, change) {
 
 export function parse(input) {
   input = input.trim();
-  if (input === '') return ['No Numbers'];
   const match = input.split(/\s+/);
 
   for (let i = match.length - 1; i >= 0; i-=1) {
