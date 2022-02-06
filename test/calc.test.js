@@ -11,12 +11,11 @@ describe("build", () => {
       { mean: 2.5 },
       { median: 2.5 },
       { min: 1 },
-      { standardDeviation: 1.118033988749895},
+      { standardDeviation: 1.118033988749895 },
       { sum: 10 },
-      { range: 3 }];
+      { range: 3 },
+    ];
 
     expect(parsed).toStrictEqual(output);
   });
 });
-
-

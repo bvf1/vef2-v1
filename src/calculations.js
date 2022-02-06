@@ -6,8 +6,8 @@ export function calculations(numbers) {
   }
 
   const calc = [];
-  calc.push(['min: ', min(numbers)]);
-  calc.push(['min: ', max(numbers)]);
+  calc.push(["min: ", min(numbers)]);
+  calc.push(["min: ", max(numbers)]);
 
   console.log("jfowif" + calc);
   /*

@@ -7,19 +7,18 @@ export function makeHTML(title, entry) {
   var doCalc = false;
   //Zif (entry)
   //console.log("is entry " + entry[0]);
-  let tg = '';
- 
-  if (!(entry[0] === 'No Numbers')) {
+  let tg = "";
+
+  if (!(entry[0] === "No Numbers")) {
     const calc = calculations(entry);
     doCalc = true;
-    
+
     for (let i = 0; i < calc.length; i++) {
       tg += `<p>${calc[i][0]} ${calc[i][1]} </p>\n`;
-      
     }
   }
   //console.log(tg);
- // console.log(entry);
+  // console.log(entry);
 
   const template = `
       <section>
@@ -42,7 +41,7 @@ export function makeHTML(title, entry) {
 }*/
 
 export function blogTemplate(title, skra, showBack = false) {
-  const back = showBack ? '<p><a href="/">Til baka</a></p>' : '';
+  const back = showBack ? '<p><a href="/">Til baka</a></p>' : "";
   return `
   <!doctype html>
   <html>
@@ -55,5 +54,4 @@ export function blogTemplate(title, skra, showBack = false) {
       ${back}
     </body>
   </html>`;
-
 }
