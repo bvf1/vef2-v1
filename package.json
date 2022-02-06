@@ -6,7 +6,6 @@
   "main": "index.js",
   "scripts": {
     "build": "node ./src/build.js && cpy public dist",
-    "start": "node ./src/app.js",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./*.test.js",
     "prettier": "prettier --write .",
     "lint": "concurrently npm:lint:*",
