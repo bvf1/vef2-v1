@@ -13,8 +13,8 @@ function changeFormat(input, change) {
 }
 
 export function parse(input) {
+  input = input.trim();
   if (input === '') return ['No Numbers'];
-  input.trim();
   const match = input.split(/\s+/);
 
   for (let i = match.length - 1; i >= 0; i-=1) {
@@ -24,8 +24,7 @@ export function parse(input) {
       else match.splice(i, 1);
     } else if (match[i].includes(',') || match[i].includes('.'))
       match[i] = changeFormat(match[i], 'punct');
-    else if (match[i].isNaN) match.splice(i, 1);
-    // if (!doesMatch(match[i])) match.splice(i,1);
+    else if (isNaN(match[i])) match.splice(i, 1);
   }
 
   if (match.length === 0) return ['No Numbers'];

@@ -18,16 +18,20 @@ async function main() {
 
     const data = await readFile(path);
     const str = data.toString('utf-8');
-
     const parsed = parse(str);
-  //  if (parsed[0] === 'No Numbers') console.log(parsed);
+   // console.log(file);
+   // console.log(parsed);
+   // if (parsed[0] === 'No Numbers') console.log(parsed);
     const html = makeHTML(file, parsed);
     const skra = skraTemplate(file, html, true);
+
     const slug = file.slice(0, -4);
     const filename = join(OUTPUT_DIR, `${slug}.html`);
-
     await writeFile(filename, skra);
-   // console.log('skra :>> ', skra);
+
+    const index = skraTemplate("Töluleg Greining: Skrár 1-12", makeIndex(skrar));
+    await writeFile(join(OUTPUT_DIR, "index.html"), index);
+
   }
 }
 
