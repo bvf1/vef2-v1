@@ -1,24 +1,20 @@
-import { calculations } from "./calculations.js";
-import { parse } from "./parser.js";
+import { calculations } from './calculations.js';
 
 export function makeHTML(title, entry) {
   const html = entry;
 
-  var doCalc = false;
-  //Zif (entry)
-  //console.log("is entry " + entry[0]);
-  let tg = "";
+  let tg = '';
 
-  if (!(entry[0] === "No Numbers")) {
+  if (!(entry[0] === 'No Numbers')) {
     const calc = calculations(entry);
-    doCalc = true;
-
-    for (let i = 0; i < calc.length; i++) {
-      tg += `<p>${calc[i][0]} ${calc[i][1]} </p>\n`;
+    for (let i = 0; i < calc.length; i+=1) {
+      tg += `<p>${calc[i][0]} ${calc[i][1]} </p>
+        `;
     }
+
+    tg = tg.trim();
   }
-  //console.log(tg);
-  // console.log(entry);
+
 
   const template = `
       <section>
@@ -32,15 +28,16 @@ export function makeHTML(title, entry) {
   return template;
 }
 
-/*export function makeIndex(files) {
+export function makeIndex(skrar) {
   let list = '';
-  for (const file of files) {
-    const 
-    
+  for (const skra of skrar) {
+    const link = `<li><a href="${`${skra}.html`}">${skra}.txt</a></li>`;
+    list += link;
   }
-}*/
+  return `<ul>${list}</ul>`;
+}
 
-export function blogTemplate(title, skra, showBack = false) {
+export function skraTemplate(title, skra, showBack = false) {
   const back = showBack ? '<p><a href="/">Til baka</a></p>' : "";
   return `
   <!doctype html>
