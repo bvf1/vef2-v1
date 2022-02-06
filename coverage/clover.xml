@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644117761519" clover="3.2.0">
-  <project timestamp="1644117761519" name="All files">
+<coverage generated="1644118062230" clover="3.2.0">
+  <project timestamp="1644118062230" name="All files">
     <metrics statements="49" coveredstatements="42" conditionals="21" coveredconditionals="16" methods="6" coveredmethods="4" elements="76" coveredelements="62" complexity="0" loc="49" ncloc="49" packages="1" files="3" classes="3"/>
     <file name="calculations.js" path="/home/bvf/vef2-v1/src/calculations.js">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
