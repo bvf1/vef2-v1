@@ -1,5 +1,6 @@
 import { join } from "path";
 import { readFile, readdir, writeFile } from "fs/promises";
+import { min, max } from "simple-statistics"
 
 import { parse } from "./parser.js";
 import { blogTemplate, makeHTML } from "./make-html.js";
@@ -20,15 +21,16 @@ async function main() {
     const str = data.toString("utf-8");
 
     const parsed = parse(str);
+    console.log(min(parsed));
     const html = makeHTML(file, parsed);
-    const skra = blogTemplate(file, html, true);
+   /* const skra = blogTemplate(file, html, true);
 
     const slug = file.slice(0, -4);
     const filename = join(OUTPUT_DIR, `${slug}.html`);
 
 
     await writeFile(filename, skra);
-   // console.log("skra :>> ", skra);
+   // console.log("skra :>> ", skra);*/
   }
 }
 
