@@ -9,7 +9,7 @@ const DATA_DIR = './data';
 const OUTPUT_DIR = './dist';
 
 async function main() {
-  
+
   const files = await readdir(DATA_DIR);
 
   const skrar = [];
@@ -30,10 +30,12 @@ async function main() {
     skrar.push(slug);
     const filename = join(OUTPUT_DIR, `${slug}.html`);
     await writeFile(filename, skra);
-
-    const index = skraTemplate("Töluleg Greining: Skrár 1-12", makeIndex (skrar));
-    await writeFile(join(OUTPUT_DIR, "index.html"), index);
-
+  }
+  try {
+      const index = skraTemplate("Töluleg Greining: Skrár 1-12", makeIndex (skrar));
+      await writeFile(join(OUTPUT_DIR, "index.html"), index);
+  } catch (error) {
+    console.error(err+" writeFile");
   }
 }
 
