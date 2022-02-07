@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "main": "build.js",
   "scripts": {
-    "build": "yarn add simple-statistics && CI='' node src/build.js && cpy public dist",
+    "build": "yarn add simple-statistics && CI='' node ./src/build.js && cpy public dist",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./*.test.js",
     "prettier": "prettier --write .",
     "lint": "concurrently npm:lint:*",

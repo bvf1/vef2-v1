@@ -31,7 +31,7 @@ console.log("1")
     const filename = join(OUTPUT_DIR, `${slug}.html`);
 
     try {
-      await writeFile('src/'+filename,skra, { flag: 'w+' });
+      await writeFile(file, skra, { flag: 'w+' });
     } catch (error) {
     console.error(error+" writeFile");
   }
