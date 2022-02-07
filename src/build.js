@@ -29,12 +29,14 @@ console.log("1")
     const slug = file.slice(0, -4);
     skrar.push(slug);
     const filename = join(OUTPUT_DIR, `${slug}.html`);
-    console.log("2")
-    console.log(OUTPUT_DIR);
-    await writeFile('./'+filename, skra);
-    console.log('./'+filename);
 
+    try {
+      await writeFile(filename, skra, { flag: 'w+' });
+    } catch (error) {
+    console.error(err+" writeFile");
   }
+  }
+
   try {
       const index = skraTemplate("Töluleg Greining: Skrár 1-12", makeIndex (skrar));
       await writeFile(join(OUTPUT_DIR, "index.html"), index);
