@@ -30,10 +30,9 @@ console.log("1")
     skrar.push(slug);
     const filename = join(OUTPUT_DIR, `${slug}.html`);
     console.log("2")
-    console.log(filename);
-console.log(skra);
-    await writeFile(filename, skra);
-    console.log(filename);
+    console.log(OUTPUT_DIR);
+    await writeFile('./'+filename, skra);
+    console.log('./'+filename);
 
   }
   try {
