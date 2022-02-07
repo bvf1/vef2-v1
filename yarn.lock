@@ -4714,7 +4714,7 @@ signal-exit@^3.0.2, signal-exit@^3.0.3:
 
 simple-statistics@^7.7.3:
   version "7.7.3"
-  resolved "https://registry.npmjs.org/simple-statistics/-/simple-statistics-7.7.3.tgz"
+  resolved "https://registry.yarnpkg.com/simple-statistics/-/simple-statistics-7.7.3.tgz#8b7b51edae40e397a28dbe8ae762ddd156ae43b6"
   integrity sha512-ym356HUIJYLYEJASkbrYGAinlivGbBZhhgRNpTxWXVncfCGh61iUsaoSM+b84RrtGI2ZJvulTCUEwscE1s4yzw==
 
 sisteransi@^1.0.5:

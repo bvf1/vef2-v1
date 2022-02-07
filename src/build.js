@@ -9,6 +9,7 @@ const DATA_DIR = './data';
 const OUTPUT_DIR = './dist';
 
 async function main() {
+  
   const files = await readdir(DATA_DIR);
 
   const skrar = [];
