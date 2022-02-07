@@ -32,7 +32,7 @@ console.log("1")
     console.log("2")
 
     await writeFile(filename, skra);
-    console.log("3")
+    console.log(3);
 
   }
   try {
