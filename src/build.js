@@ -9,7 +9,7 @@ const DATA_DIR = './data';
 const OUTPUT_DIR = './dist';
 
 async function main() {
-
+console.log("main");
   const files = await readdir(DATA_DIR);
 
   const skrar = [];
@@ -25,7 +25,7 @@ async function main() {
    // if (parsed[0] === 'No Numbers') console.log(parsed);
     const html = makeHTML(file, parsed);
     const skra = skraTemplate(file, html, true);
-
+console.log("1")
     const slug = file.slice(0, -4);
     skrar.push(slug);
     const filename = join(OUTPUT_DIR, `${slug}.html`);
@@ -37,6 +37,8 @@ async function main() {
   } catch (error) {
     console.error(err+" writeFile");
   }
+  console.log("2")
+
 }
 
 main().catch((err) => console.error(err));
