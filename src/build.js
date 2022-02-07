@@ -31,7 +31,7 @@ console.log("1")
     const filename = join(OUTPUT_DIR, `${slug}.html`);
 
     try {
-      await writeFile('./'+filename, skra, { flag: 'w+' });
+      await writeFile('src/'+filename,skra, { flag: 'w+' });
     } catch (error) {
     console.error(error+" writeFile");
   }
@@ -41,7 +41,7 @@ console.log("1")
       const index = skraTemplate("Töluleg Greining: Skrár 1-12", makeIndex (skrar));
       await writeFile(join(OUTPUT_DIR, "index.html"), index);
   } catch (error) {
-    console.error(err+" writeFile");
+    console.error(error+" writeFile");
   }
   console.log("end")
 
