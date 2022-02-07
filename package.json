@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "build": "yarn add simple-statistics && node ./src/build.js && cpy public dist",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./*.test.js",
